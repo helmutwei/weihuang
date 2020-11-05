@@ -14,9 +14,12 @@ public class CsvFileReader implements MyFileReader {
         try {
             BufferedReader textFile = new BufferedReader(new FileReader(url));
             String line = "";
-
+            int index = 0;
             while ((line = textFile.readLine()) != null){
-                collection.add(line);
+                if (index > 0){
+                    collection.add(line);
+                }
+                index++;
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

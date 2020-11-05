@@ -5,33 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f829167-580d-44e1-8c47-39c6abf118fe" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mavenServices.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/FileProcessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/MyFileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/ReaderImpl/CsvFileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/Strategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/strategyImpl/InspectionStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/football.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/weather.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/exxcellent/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weihuang.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/MyStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/strategyImpl/WeatherStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/exxcellent/TestCsvFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/exxcellent/TestFileProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/FileProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/FileProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/ReaderImpl/CsvFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/ReaderImpl/CsvFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/strategyImpl/InspectionStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exxcellent/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,6 +59,57 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
+  <component name="RunManager" selected="JUnit.TestFileProcessing.testAct">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCsvFileReader.testReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weihuang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.exxcellent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.exxcellent" />
+      <option name="MAIN_CLASS_NAME" value="com.exxcellent.TestCsvFileReader" />
+      <option name="METHOD_NAME" value="testReadFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFileProcessing.testAct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weihuang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.exxcellent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.exxcellent" />
+      <option name="MAIN_CLASS_NAME" value="com.exxcellent.TestFileProcessing" />
+      <option name="METHOD_NAME" value="testAct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestFileProcessing.testAct" />
+        <item itemvalue="JUnit.TestCsvFileReader.testReadFile" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,8 +118,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604567618815</updated>
-      <workItem from="1604567620050" duration="1307000" />
+      <workItem from="1604567620050" duration="5882000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1604569006622</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604569006622</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +138,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1604571706447">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1604571706447" />
+    <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604572128490">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1604572128490" />
     <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1604568578820">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -95,13 +158,29 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="571" y="115" key="Github.UntrackedFilesDialog/0.0.1536.834@0.0.1536.834" timestamp="1604567647785" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1604573417539">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1604573417539" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1604573417539">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1604573417539" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1604573417538">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1604573417538" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1604573417539">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1604573417539" />
     <state x="270" y="62" key="SettingsEditor" timestamp="1604568547008">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1604568547008" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1604567759191">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1604569053756">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1604567759191" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1604569053756" />
   </component>
 </project>
