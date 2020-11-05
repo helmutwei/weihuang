@@ -38,6 +38,7 @@ public class WeatherStrategy implements com.exxcellent.strategy.MyStrategy {
                 result = maxTemp - minTemp;}
             index = 0;
         }
+        System.out.println("The smallest temperatur spread is " + result);
     }
 
     @Override
