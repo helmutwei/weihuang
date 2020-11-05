@@ -5,7 +5,10 @@ import com.exxcellent.fileReader.MyFileReader;
 import java.io.*;
 import java.util.Collection;
 
-
+/*
+    This class CsvFileReader implements the interface MyFileReader,
+    and should be used for reading a CSV file.
+* */
 public class CsvFileReader implements MyFileReader {
 
     @Override

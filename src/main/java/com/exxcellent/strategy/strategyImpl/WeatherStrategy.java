@@ -1,10 +1,28 @@
 package com.exxcellent.strategy.strategyImpl;
 
+import com.exxcellent.strategy.MyStrategy;
+import com.sun.org.glassfish.gmbal.ParameterNames;
+
 import java.util.*;
 
-public class WeatherStrategy implements com.exxcellent.strategy.MyStrategy {
+
+/*
+    This class WeatherStrategy implements the interface MyStrategy,
+    and is responsible for managing the task of weather data.
+* */
+public class WeatherStrategy implements MyStrategy {
     private int result;
 
+    /*
+        Checks every element/String of the given collection,
+        reads the max and min temperature and then calculates
+        the difference between them both.
+        The smallest difference is stored in the attribute result.
+
+        The result will be printed out after all the elements have
+        been checked. It is also possible to get the stored result
+        using the method getResult()
+    * */
     @Override
     public void inspect(Collection<String> c) {
         int index = 0, minTemp = 0, maxTemp = 0;

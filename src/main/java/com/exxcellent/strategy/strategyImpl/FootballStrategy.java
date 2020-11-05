@@ -6,8 +6,23 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/*
+    This class FootballStrategy implements the interface MyStrategy,
+    and is responsible for managing the task of football data.
+* */
 public class FootballStrategy implements MyStrategy {
     private String teamName;
+
+    /*
+        Checks every element/String of the given collection,
+        calculates the absolute difference between goals and goalsAllowed.
+        If the absolute difference is the smallest, the first part of this
+        element (i.a. the name of the team) will be stored in the attribute teamName.
+
+        The teamName will be printed out after all the elements have
+        been checked. It is also possible to get the stored teamName
+        using the method getTeamName()
+    * */
     @Override
     public void inspect(Collection<String> c) {
         int index = 1, goals = 0, goalsAllowed = 0;
