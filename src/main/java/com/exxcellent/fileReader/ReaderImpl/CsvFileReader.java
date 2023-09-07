@@ -15,7 +15,7 @@ public class CsvFileReader implements MyFileReader {
     public void readFile(String url, Collection<String> collection) {
         File csv = new File(url);
         try {
-            BufferedReader textFile = new BufferedReader(new FileReader(url));
+            BufferedReader textFile = new BufferedReader(new FileReader(csv));
             String line = "";
             int index = 0;
             while ((line = textFile.readLine()) != null){

@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f829167-580d-44e1-8c47-39c6abf118fe" name="Default Changelist" comment="Methods of WeatherData refactored &amp; expanded for FootballData">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/MyFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/MyFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/ReaderImpl/CsvFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/fileReader/ReaderImpl/CsvFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/MyStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/MyStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/strategyImpl/FootballStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/strategyImpl/FootballStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/strategyImpl/WeatherStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exxcellent/strategy/strategyImpl/WeatherStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,6 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
         <option name="userSettingsFile" value="D:\mvn-workplace\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -39,21 +34,22 @@
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="1jrgRVQrLncYPBYffKOwTNRuk59" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workspace-intellij/spring-course" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Temp/my-github/weihuang"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.exxcellent" />
