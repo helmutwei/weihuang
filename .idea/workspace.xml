@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f829167-580d-44e1-8c47-39c6abf118fe" name="Default Changelist" comment="Methods of WeatherData refactored &amp; expanded for FootballData">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/test-get-branch-name.yml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Temp/my-github/weihuang&quot;
+
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Temp/my-github/weihuang/.github/workflows",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
+
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Temp\my-github\weihuang\.github\workflows" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.exxcellent" />
     </key>
@@ -180,51 +187,5 @@
     <MESSAGE value="Methods for finding the smallest temperatur spread implemented." />
     <MESSAGE value="Methods of WeatherData refactored &amp; expanded for FootballData" />
     <option name="LAST_COMMIT_MESSAGE" value="Methods of WeatherData refactored &amp; expanded for FootballData" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1604576690211">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1604576690211" />
-    <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604572128490">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1604572128490" />
-    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1604574166249">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1604574166249" />
-    <state x="639" y="315" key="Github.ShareDialog" timestamp="1604567640183">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="639" y="315" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1604567640183" />
-    <state x="571" y="115" key="Github.UntrackedFilesDialog" timestamp="1604567647785">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="571" y="115" key="Github.UntrackedFilesDialog/0.0.1536.834@0.0.1536.834" timestamp="1604567647785" />
-    <state width="746" height="334" key="GridCell.Tab.0.bottom" timestamp="1604577877317">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="746" height="334" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1604577877317" />
-    <state width="746" height="334" key="GridCell.Tab.0.center" timestamp="1604577877317">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="746" height="334" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1604577877317" />
-    <state width="746" height="334" key="GridCell.Tab.0.left" timestamp="1604577877317">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="746" height="334" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1604577877317" />
-    <state width="746" height="334" key="GridCell.Tab.0.right" timestamp="1604577877317">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="746" height="334" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1604577877317" />
-    <state x="270" y="62" key="SettingsEditor" timestamp="1604568547008">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1604568547008" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1604577967259">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1604577967259" />
   </component>
 </project>

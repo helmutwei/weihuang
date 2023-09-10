@@ -1,0 +1,12 @@
+name: Test getting repo name
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    uses: wilhelmhuang/weihuang/.github/workflows/04-get-repo-name.yml@master
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+        - run: echo ${{ needs.job1.outputs.repo_name }}

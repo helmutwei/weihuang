@@ -4,14 +4,13 @@ on:
   workflow_call:
     outputs:
         repo_name:
-            description: "The name of the repository of the caller workflow"
-            value: ${{ jobs.get-repo-name-job.outputs.repo-name }}
+            description: "The name of the repository from where the caller workflow runs"
+            value: ${{ jobs.get-repo-name-job.outputs.repo_name }}
 jobs:
   get-repo-name-job:
     runs-on: ubuntu-latest
     outputs:
-      repo-name: ${{ get-repo-name-step.outputs.output }}
+      repo_name: ${{ steps.get-repo-name-step.outputs.repo_name }}
     steps:
-      - name: get-repo-name-step
-        run: |
-          echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_OUTPUT
+      - id: get-repo-name-step
+        run: echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_OUTPUT
