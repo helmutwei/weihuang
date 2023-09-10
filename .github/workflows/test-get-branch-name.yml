@@ -1,4 +1,4 @@
-name: Test reusable workflow
+name: Test getting branch name
 on:
   workflow_dispatch:
 

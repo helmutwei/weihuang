@@ -1,4 +1,4 @@
-name: Get repository name
+name: Get branch name
 
 on:
   workflow_call:
