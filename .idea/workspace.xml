@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f829167-580d-44e1-8c47-39c6abf118fe" name="Default Changelist" comment="Methods of WeatherData refactored &amp; expanded for FootballData">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test-reusable-workflow.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test-reusable-workflow.yml" afterDir="false" />
-    </list>
+    <list default="true" id="3f829167-580d-44e1-8c47-39c6abf118fe" name="Default Changelist" comment="Methods of WeatherData refactored &amp; expanded for FootballData" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
