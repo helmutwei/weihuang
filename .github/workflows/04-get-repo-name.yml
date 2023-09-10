@@ -10,7 +10,7 @@ jobs:
   get-repo-name-job:
     runs-on: ubuntu-latest
     outputs:
-      repo-name: ${{ get-repo-name-step.outputs.repo-name }}
+      repo-name: ${{ steps.get-repo-name-step.outputs.repo-name }}
     steps:
       - id: get-repo-name-step
         run: |
