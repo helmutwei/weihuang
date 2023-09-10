@@ -1,0 +1,20 @@
+name: Get repository name
+
+on:
+  workflow_call:
+    outputs:
+        repo_name:
+            description: "The name of the branch on which the caller workflow runs"
+            value: ${{ jobs.get-branch-name-job.outputs.branch_name }}
+jobs:
+  get-branch-name-job:
+    runs-on: ubuntu-latest
+    outputs:
+      branch_name: ${{ steps.get-branch-name-step.outputs.branch_name }}
+    steps:
+      - id: get-branch-name-step
+        run: |
+          echo $GITHUB_HEAD_REF
+          echo $GITHUB_REF
+          echo ${GITHUB_REF#refs/heads/}
+          echo "branch_name=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
