@@ -1,4 +1,4 @@
-name: Test getting branch name
+name: Test getting branch name 1
 on:
   workflow_dispatch:
 
