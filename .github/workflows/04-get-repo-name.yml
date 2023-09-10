@@ -14,4 +14,4 @@ jobs:
     steps:
       - id: get-repo-name-step
         run: |
-          echo "REPO_NAME=hello" >> $GITHUB_OUTPUT
+          echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_OUTPUT
