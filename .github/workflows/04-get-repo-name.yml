@@ -5,12 +5,12 @@ on:
     outputs:
         repo_name:
             description: "The name of the repository of the caller workflow"
-            value: ${{ jobs.get-repo-name-job.outputs.repo-name }}
+            value: ${{ jobs.get-repo-name-job.outputs.repo_name }}
 jobs:
   get-repo-name-job:
     runs-on: ubuntu-latest
     outputs:
-      repo-name: ${{ steps.get-repo-name-step.outputs.repo-name }}
+      repo_name: ${{ steps.get-repo-name-step.outputs.repo_name }}
     steps:
       - id: get-repo-name-step
         run: |
