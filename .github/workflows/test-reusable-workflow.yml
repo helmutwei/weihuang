@@ -1,7 +1,7 @@
 name: Test reusable workflow
 on:
-  issues:
-    types: [opened]
+  workflow_dispatch:
+
 jobs:
   job1:
     uses: wilhelmhuang/weihuang/.github/workflows/04-get-repo-name.yml@master
