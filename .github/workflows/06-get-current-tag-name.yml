@@ -1,0 +1,17 @@
+name: Get tag name
+
+on:
+  workflow_call:
+    outputs:
+        current_tag:
+            description: "The current tag name of the repo on which the caller workflow runs"
+            value: ${{ jobs.get-current-tag-job.outputs.current_tag }}
+jobs:
+  get-current-tag-job:
+    runs-on: ubuntu-latest
+    outputs:
+      current_tag: ${{ steps.get-current-tag-step.outputs.current_tag }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: get-current-tag-step
+        run: echo "CURRENT_TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
