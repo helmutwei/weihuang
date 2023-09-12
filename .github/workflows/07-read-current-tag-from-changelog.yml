@@ -5,7 +5,7 @@ on:
     outputs:
       current_tag:
         description: "Current tag from changelog"
-        value: ${{ jobs.get-current-tag-job.outputs.current_tag }}
+        value: ${{ jobs.read-current-tag-job.outputs.current_tag }}
 
 jobs:
   read-current-tag-job:
