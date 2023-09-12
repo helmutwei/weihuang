@@ -3,8 +3,9 @@ name: Read current tag from changelog
 on:
   workflow_call:
     outputs:
-      description: "Current tag from changelog"
-      value: ${{ jobs.get-current-tag-job.outputs.current_tag }}
+      current_tag:
+        description: "Current tag from changelog"
+        value: ${{ jobs.get-current-tag-job.outputs.current_tag }}
 
 jobs:
   read-current-tag-job:
