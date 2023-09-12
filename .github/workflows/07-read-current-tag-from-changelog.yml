@@ -36,4 +36,4 @@ jobs:
         uses: actions-ecosystem/action-regex-match@v2
         with:
           text: ${{ steps.read_changelog.outputs.content }}
-          regex: '^(#\s+\[current tag\]\s+\-\s+.+)$'
+          regex: '^(#\s+\[current tag\]\s+\-\s+.+)'
