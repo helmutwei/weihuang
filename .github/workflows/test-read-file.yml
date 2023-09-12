@@ -14,7 +14,17 @@ jobs:
             branch: master
             path: CHANGELOG.md
       - name: find current tag in changelog
+        id: regex_match
         env:
           CHANGELOG_CONTENT: ${{ steps.changelog_master.outputs.content }}
         if: contains(env.CHANGELOG_CONTENT, '[current tag]')
-        run: echo "found"
+        uses: actions-ecosystem/action-regex-match@v2
+        with:
+          text: env.CHANGELOG_CONTENT
+          regex: '^((\[current tag\]\s*)([\.0-9]+)$)'
+        run: |
+          echo '${{ steps.regex_match.outputs.match }}'
+          echo '${{ steps.regex_match.outputs.group1 }}'
+          echo '${{ steps.regex_match.outputs.group2 }}'
+          echo '${{ steps.regex_match.outputs.group3 }}'
+
