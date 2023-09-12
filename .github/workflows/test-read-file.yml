@@ -13,5 +13,8 @@ jobs:
         with:
             branch: master
             path: CHANGELOG.md
-      - name: Echo CHANGELOG.md(master)
-        run: echo "${{ steps.changelog_master.outputs.content }}"
+      - name: find current tag in changelog
+        env:
+          CHANGELOG_CONTENT: ${{ steps.changelog_master.outputs.content }}
+        if: ${{ contains(CHANGELOG_CONTENT, "# [current tag]") }}
+        run: echo "found"
