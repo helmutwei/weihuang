@@ -5,7 +5,7 @@ on:
     inputs:
       branch:
         type: string
-        default: 'main-swf2'
+        default: 'master'
         required: false
         description: 'Branch from which the changelog file will be read'
     outputs:
@@ -24,7 +24,6 @@ jobs:
 
       # read changelog file
       - name: Read CHANGELOG.md(master)
-        if: ${{ inputs.branch }} != ''
         id: read_changelog
         uses: jaywcjlove/github-action-read-file@main
         with:
