@@ -20,8 +20,8 @@ jobs:
         if: contains(env.CHANGELOG_CONTENT, '[current tag]')
         uses: actions-ecosystem/action-regex-match@v2
         with:
-          text: ${{ env.CHANGELOG_CONTENT }}
-          regex: '^((\[current tag\]\s+\-\s+)([\.0-9]+))$'
+          text: env.CHANGELOG_CONTENT
+          regex: 'current tag'
       - name: print found tag
         run: |
           echo '${{ steps.regex_match.outputs.match }}'
