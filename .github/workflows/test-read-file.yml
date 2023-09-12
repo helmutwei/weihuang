@@ -1,0 +1,17 @@
+name: Test getting repo name
+on:
+  workflow_dispatch:
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Read CHANGELOG.md(master)
+        id: changelog_master
+        uses: jaywcjlove/github-action-read-file@main
+        with:
+            branch: master
+            path: CHANGELOG.md
+      - name: Echo CHANGELOG.md(master)
+        run: echo "${{ steps.changelog_master.outputs.content }}"
