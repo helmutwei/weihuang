@@ -1,4 +1,4 @@
-name: Get tag name
+name: Get current tag
 
 on:
   workflow_call:
