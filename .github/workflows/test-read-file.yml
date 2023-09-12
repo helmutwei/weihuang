@@ -16,5 +16,5 @@ jobs:
       - name: find current tag in changelog
         env:
           CHANGELOG_CONTENT: ${{ steps.changelog_master.outputs.content }}
-        if: contains($CHANGELOG_CONTENT, 'current tag')
+        if: contains(env.CHANGELOG_CONTENT, 'current tag')
         run: echo "found"
