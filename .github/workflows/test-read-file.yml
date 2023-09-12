@@ -23,7 +23,7 @@ jobs:
         uses: actions-ecosystem/action-regex-match@v2
         with:
           text: ${{ steps.changelog_master.outputs.content }}
-          regex: 'current'
+          regex: '\[current tag\]'
       - name: print found tag
         run: |
           echo '${{ steps.regex_match.outputs.match }}'
