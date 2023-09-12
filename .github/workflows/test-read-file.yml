@@ -13,11 +13,13 @@ jobs:
         with:
             branch: master
             path: CHANGELOG.md
-      - name: find current tag in changelog
-        id: regex_match
+      - name: check if current tag is set
         env:
           CHANGELOG_CONTENT: ${{ steps.changelog_master.outputs.content }}
         if: contains(env.CHANGELOG_CONTENT, '[current tag]')
+        run: echo "found"
+      - name: find current tag in changelog
+        id: regex_match
         uses: actions-ecosystem/action-regex-match@v2
         with:
           text: ${{ steps.changelog_master.outputs.content }}
