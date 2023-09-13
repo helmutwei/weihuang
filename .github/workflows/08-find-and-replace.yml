@@ -22,14 +22,15 @@ jobs:
     if: ${{ !inputs.is_tag }}
     env:
       if: ${{ inputs.repo }} == jnk__shared_library
-      REPO_BRANCH: jnkSharedLibraryBranch
+      OLD_BRANCH_TAG: "jnkSharedLibraryBranch\s*=\s*'.+'"
+      NEW_BRANCH_TAG: ${{format("jnkSharedLibraryBranch = '\refs\tags\{0}'", ${{inputs.branch_or_tag}}) }}
     steps:
       - uses: actions/checkout@v3
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "${{ env.REPO_BRANCH }}\s*=\s*'.+'"
-          replace: "${{ env.REPO_BRANCH }}\s*=\s*'{{ inputs.branch_or_tag }}'"
+          find: ${{ env.OLD_BRANCH_TAG }}
+          replace: ${{ env.NEW_BRANCH_TAG }}
 
 #  find-and-replace-tag-job:
 #    runs-on: ubuntu-latest
