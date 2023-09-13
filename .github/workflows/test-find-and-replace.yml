@@ -6,13 +6,10 @@ jobs:
   job0:
     uses: wilhelmhuang/weihuang/.github/workflows/05-get-branch-name.yml@master
   job1:
-    runs-on: ubuntu-latest
     needs: job0
-    steps:
-      - name: find and replace
-        uses: ./08-find-and-replace.yml@master
-        with:
-          repo: ${{ needs.job0.outputs.repo_name }}
-          branch_or_tag: 123
-          is_tag: false
+    uses: ./.github/workflows/08-find-and-replace.yml
+    with:
+      repo: ${{ needs.job0.outputs.repo_name }}
+      branch_or_tag: 123
+      is_tag: false
 
