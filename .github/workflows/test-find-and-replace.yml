@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
 
 jobs:
+  job0:
+    uses: ./04-get-repo-name.yml@master
   job1:
     runs-on: ubuntu-latest
     steps:
