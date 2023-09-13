@@ -4,7 +4,7 @@ on:
 
 jobs:
   job0:
-    uses: wilhelmhuang/weihuang/.github/workflows/05-get-branch-name.yml@master
+    uses: wilhelmhuang/weihuang/.github/workflows/04-get-repo-name.yml@master
   job1:
     needs: job0
     uses: ./.github/workflows/08-find-and-replace.yml

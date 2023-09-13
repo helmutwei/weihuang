@@ -13,7 +13,4 @@ jobs:
       repo_name: ${{ steps.get-repo-name-step.outputs.repo_name }}
     steps:
       - id: get-repo-name-step
-        run: | 
-          echo "I'm here!"
-#          echo "${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" \
-#          echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_OUTPUT
+        run: echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_OUTPUT
