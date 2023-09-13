@@ -10,7 +10,6 @@ jobs:
         id: get_repo
         uses: ./04-get-repo-name.yml@master
       - name: find and replace
-        needs: get_repo
         uses: ./08-find-and-replace.yml@master
         with:
           repo: ${{ steps.get_repo.outputs.repo_name }}
