@@ -36,4 +36,4 @@ jobs:
         uses: actions-ecosystem/action-regex-match@v2
         with:
           text: ${{ steps.read_changelog.outputs.content }}
-          regex: '##\s*latest:\s*([\.0-9]+)'
+          regex: ''##\s*latest:\s*([\.0-9]+)'

@@ -1,0 +1,36 @@
+name: Find and replace
+
+on:
+  workflow_call:
+    inputs:
+      repo:
+        type: string
+        required: true
+        description: 'repo to be updated'
+      branch_or_tag:
+        type: string
+        required: true
+        description: 'branch or tag'
+      is_tag:
+        type: boolean
+        required: true
+        description: 'flat to tell if the second input is a branch or a tag'
+
+jobs:
+  find-and-replace-branch-job:
+    runs-on: ubuntu-latest
+    if: !${{ inputs.is_tag }}
+    steps:
+      - run: |
+          echo ${{ inputs.repo }}
+          echo ${{ inputs.branch_or_tag }}
+          echo "is branch"
+
+  find-and-replace-tag-job:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.is_tag }}
+    steps:
+      - run: |
+          echo ${{ inputs.repo }}
+          echo ${{ inputs.branch_or_tag }}
+          echo "is tag"
