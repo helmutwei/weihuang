@@ -33,7 +33,7 @@ jobs:
       # find current tag in changelog file
       - name: Find current tag in CHANGELOG
         id: regex_match
-        uses: actions-ecosystem/action-regex-match@v2
+        uses: actions-ecosystem/action-regex-match@v2.0.1
         with:
           text: ${{ steps.read_changelog.outputs.content }}
           regex: '##\s*latest:\s*([\.0-9]+)'
