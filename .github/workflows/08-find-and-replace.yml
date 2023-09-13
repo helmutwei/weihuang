@@ -19,6 +19,8 @@ on:
 jobs:
   find-and-replace-branch-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     if: ${{ !inputs.is_tag }}
 #    env:
 #      if: ${{ inputs.repo }} == jnk__shared_library
