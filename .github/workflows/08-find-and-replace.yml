@@ -28,6 +28,8 @@ jobs:
 #      NEW_BRANCH_TAG: ${{format("jnkSharedLibraryBranch = '\refs\tags\{0}'", ${{inputs.branch_or_tag}}) }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
