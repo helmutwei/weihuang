@@ -4,7 +4,7 @@ on:
 
 jobs:
   job0:
-    uses: ./04-get-repo-name.yml@master
+    uses: wilhelmhuang/weihuang/.github/workflows/05-get-branch-name.yml@master
   job1:
     runs-on: ubuntu-latest
     steps:
