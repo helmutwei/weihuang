@@ -12,5 +12,6 @@ jobs:
     outputs:
       repo_name: ${{ steps.get-repo-name-step.outputs.repo_name }}
     steps:
+      - uses: actions/checkout@v3
       - id: get-repo-name-step
         run: echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_OUTPUT
