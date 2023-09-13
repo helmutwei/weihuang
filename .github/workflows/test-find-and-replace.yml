@@ -1,0 +1,19 @@
+name: Test find and replace
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get repo
+        id: get_repo
+        uses: ./04-get-repo-name.yml@master
+      - name: find and replace
+        needs: get_repo
+        uses: ./08-find-and-replace.yml@master
+        with:
+          repo: ${{ steps.get_repo.outputs.repo_name }}
+          branch_or_tag: 123
+          is_tag: false
+
