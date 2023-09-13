@@ -10,7 +10,7 @@ jobs:
       repo: jnk__shared_library  #jnkSharedLibraryBranch
       #repo: jnk__swc_integration  #jnkSwcIntBranch
       #repo: jnk__swc_swu_pipeline  #jnkSwcSwuPipelineBranch
-      branch_or_tag: 123
+      branch_or_tag: 1.0.1
       is_tag: false
   job3:
     needs: job0
