@@ -29,8 +29,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "jnkSharedLibraryBranch\s*=\s*'.+'"
-          replace: "jnkSharedLibraryBranch\s*=\s*'\\refs\\tags\\1.0.1'"
+          find: "jnkSharedLibraryBranch = '.+'"
+          replace: "jnkSharedLibraryBranch = '\\refs\\tags\\1.0.1'"
 
 #  find-and-replace-tag-job:
 #    runs-on: ubuntu-latest
