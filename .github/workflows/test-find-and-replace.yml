@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: job1
     steps:
-      - run: echo "${{ jobs.job1.outputs.modifiedFiles }}"
+      - run: echo ${{ needs.job1.outputs.modifiedFiles }}
 
 #  job3:
 #    needs: job0
