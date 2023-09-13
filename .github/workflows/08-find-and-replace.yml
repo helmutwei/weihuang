@@ -19,7 +19,7 @@ on:
 jobs:
   find-and-replace-branch-job:
     runs-on: ubuntu-latest
-    if: !${{ inputs.is_tag }}
+    if: ${{ !inputs.is_tag }}
     steps:
       - run: |
           echo ${{ inputs.repo }}
