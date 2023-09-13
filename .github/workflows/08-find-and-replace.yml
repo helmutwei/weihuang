@@ -21,7 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !inputs.is_tag }}
     steps:
-      -
       - run: |
           echo ${{ inputs.repo }}
           echo ${{ inputs.branch_or_tag }}
