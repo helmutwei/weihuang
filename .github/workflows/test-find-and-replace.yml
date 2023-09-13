@@ -3,13 +3,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  job0:
-    uses: wilhelmhuang/weihuang/.github/workflows/04-get-repo-name.yml@master
   job1:
     needs: job0
     uses: ./.github/workflows/08-find-and-replace.yml
     with:
-      repo: ${{ needs.job0.outputs.repo_name }}
+      repo: jnk__shared_library  #jnkSharedLibraryBranch
+      #repo: jnk__swc_integration  #jnkSwcIntBranch
+      #repo: jnk__swc_swu_pipeline  #jnkSwcSwuPipelineBranch
       branch_or_tag: 123
       is_tag: false
   job3:

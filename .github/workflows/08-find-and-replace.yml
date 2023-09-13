@@ -1,4 +1,4 @@
-name: Find and replace
+name: Find and replace tags with new ones
 
 on:
   workflow_call:
@@ -6,31 +6,36 @@ on:
       repo:
         type: string
         required: true
-        description: 'repo to be updated'
+        description: 'The name of the repository which now has a new tag or branch'
       branch_or_tag:
         type: string
         required: true
-        description: 'branch or tag'
+        description: 'The tag or branch to replace with'
       is_tag:
         type: boolean
         required: true
-        description: 'flat to tell if the second input is a branch or a tag'
+        description: 'Flag to tell whether a tag or a branch is passed as input'
 
 jobs:
   find-and-replace-branch-job:
     runs-on: ubuntu-latest
     if: ${{ !inputs.is_tag }}
+    env:
+      if: ${{ inputs.repo }} == jnk__shared_library
+      REPO_BRANCH: jnkSharedLibraryBranch
     steps:
-      - run: |
-          echo ${{ inputs.repo }}
-          echo ${{ inputs.branch_or_tag }}
-          echo "is branch"
+      - uses: actions/checkout@v3
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "${{ env.REPO_BRANCH }}\s*=\s*'.+'"
+          replace: "${{ env.REPO_BRANCH }}\s*=\s*'{{ inputs.branch_or_tag }}'"
 
-  find-and-replace-tag-job:
-    runs-on: ubuntu-latest
-    if: ${{ inputs.is_tag }}
-    steps:
-      - run: |
-          echo ${{ inputs.repo }}
-          echo ${{ inputs.branch_or_tag }}
-          echo "is tag"
+#  find-and-replace-tag-job:
+#    runs-on: ubuntu-latest
+#    if: ${{ inputs.is_tag }}
+#    steps:
+#      - run: |
+#          echo ${{ inputs.repo }}
+#          echo ${{ inputs.branch_or_tag }}
+#          echo "is tag"
