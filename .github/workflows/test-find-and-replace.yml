@@ -12,4 +12,11 @@ jobs:
       repo: ${{ needs.job0.outputs.repo_name }}
       branch_or_tag: 123
       is_tag: false
+  job3:
+    needs: job0
+    uses: ./.github/workflows/08-find-and-replace.yml
+    with:
+      repo: ${{ needs.job0.outputs.repo_name }}
+      branch_or_tag: 456
+      is_tag: true
 
