@@ -18,7 +18,7 @@ on:
 
 jobs:
   find-and-replace-jnkSharedLibraryBranch:
-    if: ${{ !inputs.is_tag && inputs.repo == 'jnk__swc_integration' }}
+    if: ${{ !inputs.is_tag && inputs.repo == 'jnk__shared_library' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
