@@ -33,7 +33,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "j.+Branch1"
+          find: "xxx"
           replace: "jnkSharedLibraryBranch2"
           exclude: .github/**
       - name: Push changes
