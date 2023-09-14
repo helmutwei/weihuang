@@ -1,1 +1,1 @@
-jnkSharedLibraryBranch = 'library/new_branch' jnkSwcIntBranch = 'library/new_branch' jnkSwcSwuPipelineBranch = 'swc/new_branch'
+jnkSharedLibraryBranch = 'library/new_branch' jnkSwcIntBranch = 'library/new_branch' jnkSwcSwuPipelineBranch = 'library/new_branch'
