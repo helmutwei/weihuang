@@ -18,7 +18,7 @@ on:
 
 jobs:
   find-and-replace-jnkSharedLibraryBranch:
-    if: ${{ inputs.is_tag }} && true
+    if: ${{ inputs.is_tag }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
