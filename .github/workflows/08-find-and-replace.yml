@@ -33,9 +33,10 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "xxx"
-          replace: "jnkSharedLibraryBranch2"
-          exclude: .github/**
+          find: "j.+ch2"
+          replace: "jnkSharedLibraryBranch3"
+          include: src/test/resources/**
+#          exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
 
