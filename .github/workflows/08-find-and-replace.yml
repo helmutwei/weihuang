@@ -12,13 +12,13 @@ on:
         required: true
         description: 'The tag or branch to replace with'
       is_tag:
-        type: string
+        type: boolean
         required: true
         description: 'Flag to tell whether a tag or a branch is passed as input'
 
 jobs:
   find-and-replace-jnkSharedLibraryBranch:
-    if: ${{ inputs.repo == 'jnk__shared_library' }}
+    if: ${{ !inputs.is_tag }} && ${{ inputs.repo == 'jnk__shared_library' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -38,7 +38,7 @@ jobs:
 
 
   find-and-replace-jnkSwcIntBranch:
-    if: ${{ inputs.repo  == 'jnk__swc_integration' }}
+    if: ${{ !inputs.is_tag }} && ${{ inputs.repo  == 'jnk__swc_integration' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -56,7 +56,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
 
   find-and-replace-jnkSwcSwuPipelineBranch:
-    if: ${{ inputs.repo  == 'jnk__swc_swu_pipeline' }}
+    if: ${{ !inputs.is_tag }} && ${{ inputs.repo  == 'jnk__swc_swu_pipeline' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
