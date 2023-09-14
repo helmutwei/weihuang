@@ -18,7 +18,8 @@ on:
 
 jobs:
   find-and-replace-jnkSharedLibraryBranch:
-    if: ${{ !inputs.is_tag }} && ${{ inputs.repo == 'jnk__shared_library' }}
+    if: false
+    #if: ${{ !inputs.is_tag }} && ${{ inputs.repo == 'jnk__shared_library' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -38,7 +39,8 @@ jobs:
 
 
   find-and-replace-jnkSwcIntBranch:
-    if: ${{ !inputs.is_tag }} && ${{ inputs.repo  == 'jnk__swc_integration' }}
+    if: ${{ inputs.is_tag }}
+    #if: ${{ !inputs.is_tag }} && ${{ inputs.repo  == 'jnk__swc_integration' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -56,7 +58,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
 
   find-and-replace-jnkSwcSwuPipelineBranch:
-    if: ${{ !inputs.is_tag }} && ${{ inputs.repo  == 'jnk__swc_swu_pipeline' }}
+    if: ${{ !inputs.is_tag }}
+    #if: ${{ !inputs.is_tag }} && ${{ inputs.repo  == 'jnk__swc_swu_pipeline' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
