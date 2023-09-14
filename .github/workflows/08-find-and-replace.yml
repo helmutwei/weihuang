@@ -17,7 +17,7 @@ on:
         description: 'Flag to tell whether a tag or a branch is passed as input'
 
 jobs:
-  find-and-replace-job:
+  find-and-replace-with-new-branch:
     if: ${{ !inputs.is_tag }}
     runs-on: ubuntu-latest
     permissions:
