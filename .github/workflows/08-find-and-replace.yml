@@ -23,6 +23,7 @@ jobs:
       contents: write
     if: ${{ !inputs.is_tag }} && ${{ inputs.repo }} == jnk__shared_library
     steps:
+      - run: echo "jnkSharedLibraryBranch"
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
@@ -43,6 +44,7 @@ jobs:
       contents: write
     if: ${{ !inputs.is_tag }} && ${{ inputs.repo }} == jnk__swc_integration
     steps:
+      - run: echo "jnkSwcIntBranch"
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
@@ -62,6 +64,7 @@ jobs:
       contents: write
     if: ${{ !inputs.is_tag }} && ${{ inputs.repo }} == jnk__swc_swu_pipeline
     steps:
+      - run: echo "jnkSwcSwuPipelineBranch"
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
