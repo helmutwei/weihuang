@@ -20,7 +20,7 @@ jobs:
     with:
       repo: jnk__swc_swu_pipeline
       branch_or_tag: swu/new_branch
-      is_tag: true
+      is_tag: false
 
 
 #  job2:
