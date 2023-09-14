@@ -88,3 +88,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           repository: wilhelmhuang/project1
+          ref: ${{ github.head_ref }}
