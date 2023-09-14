@@ -9,18 +9,18 @@ jobs:
       repo: jnk__shared_library
       branch_or_tag: library/new_branch
       is_tag: false
-  job2:
-    uses: ./.github/workflows/08-find-and-replace.yml
-    with:
-      repo: jnk__swc_integration
-      branch_or_tag: swc/new_branch
-      is_tag: false
-  job3:
-    uses: ./.github/workflows/08-find-and-replace.yml
-    with:
-      repo: jnk__swc_swu_pipeline
-      branch_or_tag: swu/new_branch
-      is_tag: false
+#  job2:
+#    uses: ./.github/workflows/08-find-and-replace.yml
+#    with:
+#      repo: jnk__swc_integration
+#      branch_or_tag: swc/new_branch
+#      is_tag: false
+#  job3:
+#    uses: ./.github/workflows/08-find-and-replace.yml
+#    with:
+#      repo: jnk__swc_swu_pipeline
+#      branch_or_tag: swu/new_branch
+#      is_tag: false
 
 
 #  job2:
