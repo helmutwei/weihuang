@@ -38,7 +38,7 @@ jobs:
 
 
   find-and-replace-jnkSwcIntBranch:
-    if: false
+    if: ${{ inputs.is_tag }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -57,7 +57,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
 
   find-and-replace-jnkSwcSwuPipelineBranch:
-    if: false
+    if: ${{ !inputs.is_tag }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
