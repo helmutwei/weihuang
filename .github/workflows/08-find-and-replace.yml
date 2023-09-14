@@ -60,8 +60,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: wilhelmhuang/project1
+          path: wilhelmhuang/project1
           ref: ${{ github.head_ref }}
-          token: ${{ secrets.REPO_TOKEN }}
       - name: Find and Replace jnkSharedLibraryBranch
         if: ${{ inputs.repo == 'jnk__shared_library' }}
         uses: jacobtomlinson/gha-find-replace@v3
