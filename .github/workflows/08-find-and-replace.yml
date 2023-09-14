@@ -54,3 +54,17 @@ jobs:
   find-and-replace-with-new-tag:
     if: ${{ inputs.is_tag }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Find and Replace jnkSharedLibraryBranch
+        if: ${{ inputs.repo == 'jnk__shared_library' }}
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
+          #          include: src/test/resources/**
+          exclude: .github/**
