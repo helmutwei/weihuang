@@ -32,11 +32,12 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
+        if: ${{ inputs.repo }} == jnk__shared_library
         with:
-          find: "j.+ch2"
-          replace: "jnkSharedLibraryBranch3"
-          include: src/test/resources/**
-#          exclude: .github/**
+          find: "jnkSharedLibraryBranch\s*=\s*[A-Za-z\d\s\.'-]+"
+          replace: jnkSharedLibraryBranch = ${{ inputs.branch_or_tag }}
+#          include: src/test/resources/**
+          exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
 
