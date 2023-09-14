@@ -17,27 +17,35 @@ on:
         description: 'Flag to tell whether a tag or a branch is passed as input'
 
 jobs:
-  find-and-replace-branch-job:
+  find-and-replace-jnkSharedLibraryBranch:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    if: ${{ !inputs.is_tag }}
-#    env:
-#      if: ${{ inputs.repo }} == jnk__shared_library
-#      OLD_BRANCH_TAG: "jnkSharedLibraryBranch\s*=\s*'.+'"
-#      NEW_BRANCH_TAG: ${{format("jnkSharedLibraryBranch = '\refs\tags\{0}'", ${{inputs.branch_or_tag}}) }}
+    if: ${{ !inputs.is_tag }} && ${{ inputs.repo }} == jnk__shared_library
     steps:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSharedLibraryBranch
         uses: jacobtomlinson/gha-find-replace@v3
-        if: ${{ inputs.repo }} == jnk__shared_library
         with:
           find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
 #          include: src/test/resources/**
           exclude: .github/**
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+
+
+  find-and-replace-jnkSwcIntBranch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: ${{ !inputs.is_tag }} && ${{ inputs.repo }} == jnk__swc_integration
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSwcIntBranch
         uses: jacobtomlinson/gha-find-replace@v3
         if: ${{ inputs.repo }} == jnk__swc_integration
@@ -45,6 +53,18 @@ jobs:
           find: jnkSwcIntBranchBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSwcIntBranchBranch = '${{ inputs.branch_or_tag }}'
           exclude: .github/**
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+
+  find-and-replace-jnkSwcSwuPipelineBranch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: ${{ !inputs.is_tag }} && ${{ inputs.repo }} == jnk__swc_swu_pipeline
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSwcSwuPipelineBranch
         uses: jacobtomlinson/gha-find-replace@v3
         if: ${{ inputs.repo }} == jnk__swc_swu_pipeline
@@ -54,7 +74,6 @@ jobs:
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
-
 #  find-and-replace-tag-job:
 #    runs-on: ubuntu-latest
 #    if: ${{ inputs.is_tag }}
