@@ -50,8 +50,8 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v3
         if: ${{ inputs.repo }} == jnk__swc_integration
         with:
-          find: jnkSwcIntBranchBranch\s*=\s*[/_A-Za-z\d\.'-]+
-          replace: jnkSwcIntBranchBranch = '${{ inputs.branch_or_tag }}'
+          find: jnkSwcIntBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSwcIntBranch = '${{ inputs.branch_or_tag }}'
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -69,8 +69,8 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v3
         if: ${{ inputs.repo }} == jnk__swc_swu_pipeline
         with:
-          find: jnkSwcSwuPipelineBranchBranch\s*=\s*[/_A-Za-z\d\.'-]+
-          replace: jnkSwcSwuPipelineBranchBranch = '${{ inputs.branch_or_tag }}'
+          find: jnkSwcSwuPipelineBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSwcSwuPipelineBranch = '${{ inputs.branch_or_tag }}'
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
