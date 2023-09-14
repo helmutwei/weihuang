@@ -10,11 +10,11 @@ on:
       branch_or_tag:
         type: string
         required: true
-        description: 'The tag or branch to replace with'
+        description: 'The tag or branch to be replaced with'
       is_tag:
         type: boolean
         required: true
-        description: 'Flag to tell whether a tag or a branch is passed as input'
+        description: 'Flag to tell whether a tag or branch is passed as input'
 
 jobs:
   find-and-replace-with-new-branch:
@@ -51,11 +51,6 @@ jobs:
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
 
-#  find-and-replace-tag-job:
-#    runs-on: ubuntu-latest
-#    if: ${{ inputs.is_tag }}
-#    steps:
-#      - run: |
-#          echo ${{ inputs.repo }}
-#          echo ${{ inputs.branch_or_tag }}
-#          echo "is tag"
+  find-and-replace-with-new-tag:
+    if: ${{ inputs.is_tag }}
+    runs-on: ubuntu-latest
