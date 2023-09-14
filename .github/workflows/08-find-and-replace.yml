@@ -18,7 +18,7 @@ on:
 
 jobs:
   find-and-replace-jnkSharedLibraryBranch:
-    if: false
+    if: ${{ inputs.repo }} == 'jnk__shared_library'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -38,7 +38,7 @@ jobs:
 
 
   find-and-replace-jnkSwcIntBranch:
-    if: ${{ inputs.is_tag }}
+    if: ${{ inputs.repo }} == 'jnk__swc_integration'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -48,7 +48,6 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSwcIntBranch
         uses: jacobtomlinson/gha-find-replace@v3
-        if: ${{ inputs.repo }} == jnk__swc_integration
         with:
           find: jnkSwcIntBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSwcIntBranch = '${{ inputs.branch_or_tag }}'
@@ -57,7 +56,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
 
   find-and-replace-jnkSwcSwuPipelineBranch:
-    if: ${{ !inputs.is_tag }}
+    if: ${{ inputs.repo }} == 'jnk__swc_swu_pipeline'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -67,7 +66,6 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSwcSwuPipelineBranch
         uses: jacobtomlinson/gha-find-replace@v3
-        if: ${{ inputs.repo }} == jnk__swc_swu_pipeline
         with:
           find: jnkSwcSwuPipelineBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSwcSwuPipelineBranch = '${{ inputs.branch_or_tag }}'
