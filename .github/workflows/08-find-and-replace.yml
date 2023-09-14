@@ -51,7 +51,7 @@ jobs:
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
 
-  find-and-replace-with-new-tag:
+  find-and-replace-with-new-tag-for-project1:
     if: ${{ inputs.is_tag }}
     runs-on: ubuntu-latest
     permissions:
@@ -59,6 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          repository: wilhelmhuang/project1
           ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSharedLibraryBranch
         if: ${{ inputs.repo == 'jnk__shared_library' }}
@@ -66,5 +67,6 @@ jobs:
         with:
           find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
-          #          include: src/test/resources/**
           exclude: .github/**
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
