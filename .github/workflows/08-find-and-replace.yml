@@ -30,13 +30,27 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-      - name: Find and Replace
+      - name: Find and Replace jnkSharedLibraryBranch
         uses: jacobtomlinson/gha-find-replace@v3
         if: ${{ inputs.repo }} == jnk__shared_library
         with:
           find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
 #          include: src/test/resources/**
+          exclude: .github/**
+      - name: Find and Replace jnkSwcIntBranch
+        uses: jacobtomlinson/gha-find-replace@v3
+        if: ${{ inputs.repo }} == jnk__swc_integration
+        with:
+          find: jnkSwcIntBranchBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSwcIntBranchBranch = '${{ inputs.branch_or_tag }}'
+          exclude: .github/**
+      - name: Find and Replace jnkSwcSwuPipelineBranch
+        uses: jacobtomlinson/gha-find-replace@v3
+        if: ${{ inputs.repo }} == jnk__swc_swu_pipeline
+        with:
+          find: jnkSwcSwuPipelineBranchBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSwcSwuPipelineBranchBranch = '${{ inputs.branch_or_tag }}'
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
