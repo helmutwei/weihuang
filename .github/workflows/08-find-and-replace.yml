@@ -34,8 +34,8 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v3
         if: ${{ inputs.repo }} == jnk__shared_library
         with:
-          find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\s\.'-]+
-          replace: jnkSharedLibraryBranch = ${{ inputs.branch_or_tag }}
+          find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\s\.'-]+\s
+          replace: jnkSharedLibraryBranch = ${{ inputs.branch_or_tag }}\s
 #          include: src/test/resources/**
           exclude: .github/**
       - name: Push changes
