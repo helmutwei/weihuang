@@ -35,7 +35,7 @@ jobs:
         if: ${{ inputs.repo }} == jnk__shared_library
         with:
           find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
-          replace: jnkSharedLibraryBranch = ${{ inputs.branch_or_tag }}
+          replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
 #          include: src/test/resources/**
           exclude: .github/**
       - name: Push changes
