@@ -59,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          repository: wilhelmhuang/weihuang
+          repository: wilhelmhuang/project1
           ref: ${{ github.head_ref }}
       - run: echo "${{ github.repository }}"
       - name: Find and Replace jnkSharedLibraryBranch
