@@ -59,8 +59,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          repository: wilhelmhuang/project1
-          path: wilhelmhuang/project1
+#          repository: wilhelmhuang/project1
+#          path: wilhelmhuang/project1
           ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSharedLibraryBranch
         if: ${{ inputs.repo == 'jnk__shared_library' }}
