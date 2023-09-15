@@ -61,6 +61,7 @@ jobs:
         with:
           repository: wilhelmhuang/weihuang
           ref: ${{ github.head_ref }}
+      - run: echo "${{ github.repository }}"
       - name: Find and Replace jnkSharedLibraryBranch
         if: ${{ inputs.repo == 'jnk__shared_library' }}
         uses: jacobtomlinson/gha-find-replace@v3
@@ -83,7 +84,7 @@ jobs:
           find: jnkSwcSwuPipelineBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSwcSwuPipelineBranch = '${{ inputs.branch_or_tag }}'
           exclude: .github/**
+      - run: echo "${{ github.repository }}"
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          repository: weihuang
+      - run: echo "${{ github.repository }}"
