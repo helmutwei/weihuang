@@ -87,4 +87,3 @@ jobs:
       - run: echo "${{ github.repository }}"
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
-      - run: echo "${{ github.repository }}"
