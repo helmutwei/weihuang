@@ -6,8 +6,8 @@ jobs:
   job1:
     uses: ./.github/workflows/08-find-and-replace.yml
     with:
-      repo: jnk__shared_library
-      branch_or_tag: 1.8.3
+      repo: jnk__swc_integration
+      branch_or_tag: 2.0.0
       is_tag: true
 
 #  job2:
