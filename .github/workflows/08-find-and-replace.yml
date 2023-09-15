@@ -60,7 +60,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: wilhelmhuang/weihuang
-          path: ./weihuang
+          path: wilhelmhuang/weihuang
           ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSharedLibraryBranch
         if: ${{ inputs.repo == 'jnk__shared_library' }}
@@ -88,5 +88,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           repository: wilhelmhuang/weihuang
-          path: ./weihuang
           ref: ${{ github.head_ref }}
