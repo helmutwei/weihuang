@@ -9,7 +9,7 @@ jobs:
       repo: jnk__shared_library
       branch_or_tag: lib/new_branch
       is_tag: false
-
+    secrets: inherit
 #  job2:
 #    uses: ./.github/workflows/08-find-and-replace.yml
 #    with:
