@@ -86,6 +86,3 @@ jobs:
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          repository: wilhelmhuang/weihuang
-          branch: ${{ github.head_ref }}
