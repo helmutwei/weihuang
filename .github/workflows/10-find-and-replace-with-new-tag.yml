@@ -2,15 +2,7 @@ name: Find and replace tags with new ones
 
 on:
   repository_dispatch:
-    inputs:
-      repo:
-        type: string
-        required: true
-        description: 'The name of the repository which now has a new tag or branch'
-      branch_or_tag:
-        type: string
-        required: true
-        description: 'The tag or branch to be replaced with'
+    types: [doit]
 
 jobs:
   find-and-replace-with-new-tag:
@@ -20,26 +12,26 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Find and Replace jnkSharedLibraryBranch
-        if: ${{ inputs.repo == 'jnk__shared_library' }}
+        if: ${{ github.event.client_payload.repo == 'jnk__shared_library' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
-          replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
+          replace: jnkSharedLibraryBranch = '${{ github.event.client_payload.new_tag }}'
           #          include: src/test/resources/**
           exclude: .github/**
       - name: Find and Replace jnkSwcIntBranch
-        if: ${{ inputs.repo == 'jnk__swc_integration' }}
+        if: ${{ github.event.client_payload.repo == 'jnk__swc_integration' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: jnkSwcIntBranch\s*=\s*[/_A-Za-z\d\.'-]+
-          replace: jnkSwcIntBranch = '${{ inputs.branch_or_tag }}'
+          replace: jnkSwcIntBranch = '${{ github.event.client_payload.new_tag }}'
           exclude: .github/**
       - name: Find and Replace jnkSwcSwuPipelineBranch
-        if: ${{ inputs.repo == 'jnk__swc_swu_pipeline' }}
+        if: ${{ github.event.client_payload.repo == 'jnk__swc_swu_pipeline' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: jnkSwcSwuPipelineBranch\s*=\s*[/_A-Za-z\d\.'-]+
-          replace: jnkSwcSwuPipelineBranch = '${{ inputs.branch_or_tag }}'
+          replace: jnkSwcSwuPipelineBranch = '${{ github.event.client_payload.new_tag }}'
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4

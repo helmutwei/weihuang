@@ -4,16 +4,15 @@ on:
 
 jobs:
   job1:
-    uses: ./.github/workflows/10-find-and-replace-with-new-tag.yml
+    strategy:
+      matrix:
+        worker: [./.github/workflows/10-find-and-replace-with-new-tag.yml, wilhelmhuang/project1/.github/workflows/10-find-and-replace-with-new-tag.yml@master]
+    uses: ${{ matrix.worker }}
     with:
-      repo: jnk__swc_integration
-      branch_or_tag: 2.0.0
-  job2:
-    uses: wilhelmhuang/project1/.github/workflows/10-find-and-replace-with-new-tag.yml@master
-    with:
-      repo: jnk__swc_integration
-      branch_or_tag: 2.0.0
       token: ${{ secrets.PAT }}
+      event-type: doit
+      client-payload: '{"repo": "jnk__swc_integration", "new_tag": "2.0.0"}'
+
 
 
 
