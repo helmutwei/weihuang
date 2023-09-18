@@ -3,6 +3,8 @@ name: Find and replace tags with new ones
 on:
   repository_dispatch:
     types: [doit]
+  workflow_call:
+
 
 jobs:
   find-and-replace-with-new-tag:
