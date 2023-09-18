@@ -2,7 +2,7 @@ name: Find and replace tags with new ones
 
 on:
   repository_dispatch:
-    types: [doit]
+    types: [update_tag]
 
 
 jobs:
