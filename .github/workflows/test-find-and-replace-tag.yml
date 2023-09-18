@@ -1,0 +1,48 @@
+name: Test find and replace
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    uses: ./.github/workflows/10-find-and-replace-with-new-tag.yml
+    with:
+      repo: jnk__swc_integration
+      branch_or_tag: 2.0.0
+  job2:
+    uses: wilhelmhuang/project1/.github/workflows/10-find-and-replace-with-new-tag.yml@master
+    with:
+      repo: jnk__swc_integration
+      branch_or_tag: 2.0.0
+      token: ${{ secrets.PAT }}
+
+
+
+
+#  job2:
+#    uses: ./.github/workflows/08-find-and-replace.yml
+#    with:
+#      repo: jnk__swc_integration
+#      branch_or_tag: swc/new_branch
+#      is_tag: false
+#  job3:
+#    uses: ./.github/workflows/08-find-and-replace.yml
+#    with:
+#      repo: jnk__swc_swu_pipeline
+#      branch_or_tag: swu/new_branch
+#      is_tag: false
+
+
+#  job2:
+#    runs-on: ubuntu-latest
+#    needs: job1
+#    steps:
+#      - run: echo ${{ needs.job1.outputs.modifiedFiles }}
+
+#  job3:
+#    needs: job0
+#    uses: ./.github/workflows/08-find-and-replace.yml
+#    with:
+#      repo: ${{ needs.job0.outputs.repo_name }}
+#      branch_or_tag: 456
+#      is_tag: true
+
