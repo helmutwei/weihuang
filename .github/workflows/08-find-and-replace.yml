@@ -85,3 +85,4 @@ jobs:
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
+        push_options: '--force'
