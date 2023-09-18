@@ -1,4 +1,4 @@
-name: Find and replace tags with new ones
+name: 10 find and replace with new tag
 
 on:
   repository_dispatch:
