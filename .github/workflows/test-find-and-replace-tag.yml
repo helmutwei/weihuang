@@ -4,7 +4,7 @@ on:
 
 jobs:
   job1:
-    uses: ./.github/workflows/10-find-and-replace-with-new-tag.yml
+    uses: wilhelmhuang/weihuang/.github/workflows/10-find-and-replace-with-new-tag.yml@master
     with:
       token: ${{ secrets.PAT }}
       event-type: doit
