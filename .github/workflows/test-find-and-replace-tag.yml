@@ -3,12 +3,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  job1:
-    uses: wilhelmhuang/weihuang/.github/workflows/10-find-and-replace-with-new-tag.yml@master
-    with:
-      token: ${{ secrets.PAT }}
-      event-type: doit
-      client-payload: '{"repo": "jnk__swc_integration", "new_tag": "2.0.0"}'
+#  job1:
+#    uses: wilhelmhuang/weihuang/.github/workflows/10-find-and-replace-with-new-tag.yml@master
+#    with:
+#      token: ${{ secrets.PAT }}
+#      event-type: doit
+#      client-payload: '{"repo": "jnk__swc_integration", "new_tag": "2.0.0"}'
 
   job2:
     uses: wilhelmhuang/project1/.github/workflows/10-find-and-replace-with-new-tag.yml@master
