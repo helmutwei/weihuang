@@ -1,4 +1,4 @@
-name: Find and replace tags with new ones
+name: 09 find and replace with branch name
 
 on:
   workflow_call:

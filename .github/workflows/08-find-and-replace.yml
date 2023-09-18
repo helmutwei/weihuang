@@ -1,4 +1,4 @@
-name: Find and replace tags with new ones
+name: 08 find and replace
 
 on:
   workflow_call:
