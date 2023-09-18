@@ -1,4 +1,4 @@
-name: Test find and replace
+name: Test find and replace tag
 on:
   workflow_dispatch:
 
