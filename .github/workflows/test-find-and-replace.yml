@@ -6,7 +6,7 @@ jobs:
   job1:
     uses: ./.github/workflows/08-find-and-replace.yml
     with:
-      repo: jnk__swc_integration
+      repo: jnk__swc_swu_pipeline
       branch_or_tag: 3.0.0
       is_tag: true
 
