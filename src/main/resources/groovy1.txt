@@ -1,1 +1,1 @@
-jnkSharedLibraryBranch = '1.8.3' jnkSwcIntBranch = '2.0.0' jnkSwcSwuPipelineBranch = 'swu/new_branch'
+jnkSharedLibraryBranch = '1.8.3' jnkSwcIntBranch = '3.0.0' jnkSwcSwuPipelineBranch = 'swu/new_branch'
