@@ -6,7 +6,7 @@ jobs:
   job1:
     strategy:
       matrix:
-        worker: [./.github/workflows/10-find-and-replace-with-new-tag.yml, wilhelmhuang/project1/.github/workflows/10-find-and-replace-with-new-tag.yml@master]
+        worker: [wilhelmhuang/weihuang/.github/workflows/10-find-and-replace-with-new-tag.yml@master, wilhelmhuang/project1/.github/workflows/10-find-and-replace-with-new-tag.yml@master]
     uses: ${{ matrix.worker }}
     with:
       token: ${{ secrets.PAT }}
