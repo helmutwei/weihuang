@@ -10,15 +10,15 @@ on:
       branch_or_tag:
         type: string
         required: true
-        description: 'The tag or branch to replace with'
+        description: 'The tag or branch to be replaced with'
       is_tag:
         type: boolean
         required: true
-        description: 'Flag to tell whether a tag or a branch is passed as input'
+        description: 'Flag to tell whether a tag or branch is passed as input'
 
 jobs:
-  find-and-replace-jnkSharedLibraryBranch:
-    if: ${{ !inputs.is_tag && inputs.repo == 'jnk__shared_library' }}
+  find-and-replace-with-new-branch:
+    if: ${{ !inputs.is_tag }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -27,44 +27,22 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSharedLibraryBranch
+        if: ${{ inputs.repo == 'jnk__shared_library' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
 #          include: src/test/resources/**
           exclude: .github/**
-      - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-
-
-  find-and-replace-jnkSwcIntBranch:
-    if: ${{ !inputs.is_tag && inputs.repo == 'jnk__swc_integration' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSwcIntBranch
+        if: ${{ inputs.repo == 'jnk__swc_integration' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: jnkSwcIntBranch\s*=\s*[/_A-Za-z\d\.'-]+
           replace: jnkSwcIntBranch = '${{ inputs.branch_or_tag }}'
           exclude: .github/**
-      - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-
-  find-and-replace-jnkSwcSwuPipelineBranch:
-    if: ${{ !inputs.is_tag && inputs.repo == 'jnk__swc_swu_pipeline' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref }}
       - name: Find and Replace jnkSwcSwuPipelineBranch
+        if: ${{ inputs.repo == 'jnk__swc_swu_pipeline' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: jnkSwcSwuPipelineBranch\s*=\s*[/_A-Za-z\d\.'-]+
@@ -72,11 +50,38 @@ jobs:
           exclude: .github/**
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
-#  find-and-replace-tag-job:
-#    runs-on: ubuntu-latest
-#    if: ${{ inputs.is_tag }}
-#    steps:
-#      - run: |
-#          echo ${{ inputs.repo }}
-#          echo ${{ inputs.branch_or_tag }}
-#          echo "is tag"
+
+  find-and-replace-with-new-tag-for-project1:
+    if: ${{ inputs.is_tag }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: wilhelmhuang/project1
+          ref: ${{ github.head_ref }}
+      - name: Find and Replace jnkSharedLibraryBranch
+        if: ${{ inputs.repo == 'jnk__shared_library' }}
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: jnkSharedLibraryBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSharedLibraryBranch = '${{ inputs.branch_or_tag }}'
+          #          include: src/test/resources/**
+          exclude: .github/**
+      - name: Find and Replace jnkSwcIntBranch
+        if: ${{ inputs.repo == 'jnk__swc_integration' }}
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: jnkSwcIntBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSwcIntBranch = '${{ inputs.branch_or_tag }}'
+          exclude: .github/**
+      - name: Find and Replace jnkSwcSwuPipelineBranch
+        if: ${{ inputs.repo == 'jnk__swc_swu_pipeline' }}
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: jnkSwcSwuPipelineBranch\s*=\s*[/_A-Za-z\d\.'-]+
+          replace: jnkSwcSwuPipelineBranch = '${{ inputs.branch_or_tag }}'
+          exclude: .github/**
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
