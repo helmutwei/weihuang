@@ -12,7 +12,7 @@ jobs:
       - uses: peter-evans/repository-dispatch@v1
         with:
           repository: ${{ matrix.repo_name }}
-          token: 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
+          token: ${{ secrets.PAT }}
           event-type: update_tag
           client-payload: '{"repo": "jnk__swc_integration", "new_tag": "2.0.0"}'
 
