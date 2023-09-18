@@ -4,15 +4,17 @@ on:
 
 jobs:
   job1:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         repo_name: [wilhelmhuang/weihuang, wilhelmhuang/project1]
-    uses: peter-evans/repository-dispatch@v1
-    with:
-      repository: ${{ matrix.repo_name }}
-      token: ${{ secrets.PAT }}
-      event-type: doit
-      client-payload: '{"repo": "jnk__swc_integration", "new_tag": "2.0.0"}'
+    steps:
+      - uses: peter-evans/repository-dispatch@v1
+        with:
+          repository: ${{ matrix.repo_name }}
+          token: ${{ secrets.PAT }}
+          event-type: doit
+          client-payload: '{"repo": "jnk__swc_integration", "new_tag": "2.0.0"}'
 
 
 
