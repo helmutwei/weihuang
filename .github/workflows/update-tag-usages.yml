@@ -7,6 +7,6 @@ jobs:
     uses: ./.github/workflows/trigger-find-and-replace-tag.yml
     with:
       repo: jnk__swc_swu_pipeline
-      tag: 3.0.1
+      tag: 3.0.2
       runner: ubuntu-latest
     secrets: inherit
