@@ -1,0 +1,31 @@
+name: Trigger find and replace tag
+on:
+  workflow_call:
+    inputs:
+      repo:
+        type: string
+        required: true
+        description: 'The name of the repository which now has a new tag'
+      tag:
+        type: string
+        required: true
+        description: 'The new tag to be replaced with'
+      runner:
+        required: true
+        type: string
+        description: "The runner id as string"
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo_name: [wilhelmhuang/weihuang, wilhelmhuang/project1]
+    steps:
+      - uses: peter-evans/repository-dispatch@v1
+        with:
+          repository: ${{ matrix.repo_name }}
+          token: ${{ secrets.REPO_TOKEN }}
+          event-type: update_tag
+          client-payload: '{"repo": ${{ inputs.repo}}, "new_tag": ${{ inputs.tag}}, "runner": ${{ inputs.runner}}}'
+          # client-payload: '{"repo": "jnk__swc_swu_pipeline", "new_tag": "3.0.0", "runner": "ubuntu-latest"}'
