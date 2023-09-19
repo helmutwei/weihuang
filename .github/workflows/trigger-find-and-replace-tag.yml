@@ -1,4 +1,4 @@
-name: Trigger find and replace tag
+name: Update tag usages
 on:
   workflow_call:
     inputs:
