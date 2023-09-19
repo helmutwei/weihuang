@@ -7,7 +7,7 @@ jobs:
     uses: ./.github/workflows/09-find-and-replace-with-branch-name.yml
     with:
       repo: jnk__shared_library
-      branch: lib/feature_branch
+      branch: lib/feature_branch_new
 
 #  job2:
 #    uses: ./.github/workflows/08-find-and-replace.yml

@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    if: ${{ inputs.branch != 'master' }}
     steps:
       - uses: actions/checkout@v3
         with:
