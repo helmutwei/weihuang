@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ inputs.branch }}
+          ref: ${{ github.ref }}
       - name: Find and Replace jnkSharedLibraryBranch
         if: ${{ inputs.repo == 'jnk__shared_library' }}
         uses: jacobtomlinson/gha-find-replace@v3
