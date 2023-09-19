@@ -1,10 +1,10 @@
-name: Test find and replace tag
+name: Update tag usages
 on:
   workflow_dispatch:
 
 jobs:
   job1:
-    uses: ./.github/workflows/10-find-and-replace-with-new-tag.yml.yml
+    uses: ./.github/workflows/trigger-find-and-replace-tag.yml
     with:
       repo: jnk__swc_swu_pipeline
       tag: 3.0.1
