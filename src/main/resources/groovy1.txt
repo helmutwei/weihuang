@@ -1,1 +1,1 @@
-jnkSharedLibraryBranch = 'lib/feature_branch_new' jnkSwcIntBranch = '2.0.0' jnkSwcSwuPipelineBranch = '3.0.0'
+jnkSharedLibraryBranch = 'lib/yyyyyyy' jnkSwcIntBranch = '2.0.0' jnkSwcSwuPipelineBranch = '3.0.0'
