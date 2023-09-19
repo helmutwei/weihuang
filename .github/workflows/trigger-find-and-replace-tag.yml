@@ -17,7 +17,7 @@ on:
 
 jobs:
   job1:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.runner}}
     strategy:
       matrix:
         repo_name: [wilhelmhuang/weihuang, wilhelmhuang/project1]
