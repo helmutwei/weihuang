@@ -28,6 +28,9 @@ jobs:
   create-tag:
     runs-on: ${{ inputs.runner }}
     steps:
+      - uses: actions/checkout@v3
+        with:
+          branch: ${{ inputs.branch }}
       - name: create tag
         run: |
           git tag ${{ inputs.tag }} ${{ inputs.branch }}
