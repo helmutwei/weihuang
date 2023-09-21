@@ -31,6 +31,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           branch: ${{ inputs.branch }}
+      - run: echo ${{ github.ref }}
       - name: create tag
         run: |
           git tag ${{ inputs.tag }} ${{ inputs.branch }}
