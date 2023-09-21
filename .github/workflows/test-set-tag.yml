@@ -9,6 +9,6 @@ jobs:
     if: github.event.pull_request.merged
     uses: ./.github/workflows/11-set-tag.yml
     with:
-      tag: 2.0.0
-      branch: master
+      tag: 2.0.1
+      branch: feature_branch
       runner: ubuntu-latest
