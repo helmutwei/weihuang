@@ -1,0 +1,14 @@
+name: Test set tag
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  update-tag-usages-after-merge:
+    if: github.event.pull_request.merged
+    uses: ./.github/workflows/11-set-tag.yml
+    with:
+      tag: 2.0.0
+      branch: master
+      runner: ubuntu-latest
