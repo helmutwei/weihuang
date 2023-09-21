@@ -34,3 +34,5 @@ jobs:
       - name: create tag
         run: |
           git tag ${{ inputs.tag }} ${{ inputs.branch }}
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
