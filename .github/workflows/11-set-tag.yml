@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: master
+          ref: ${{ inputs.branch }}
       - name: create tag
         run: |
           git tag ${{ inputs.tag }} ${{ inputs.branch }}
