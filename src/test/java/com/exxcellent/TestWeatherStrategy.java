@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestWeatherStrategy {
-
     @Test
     public void testAct(){
         String url = "D:\\mvn-workplace\\weihuang\\src\\main\\resources\\weather.csv";
