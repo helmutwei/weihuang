@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          branch: master
+          ref: master
       - uses: ./.github/workflows/11-set-tag.yml
         with:
           tag: 2.0.2
