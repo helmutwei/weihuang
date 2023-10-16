@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestCsvFileReader {
-
     @Test
     public void testReadFile(){
         String url = "D:\\mvn-workplace\\weihuang\\src\\main\\resources\\weather.csv";
